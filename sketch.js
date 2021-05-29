@@ -23,7 +23,7 @@ function solo()
 {
   background("black");
   
- if(diffS>30)
+ if(diffS>29.8)
     {
       gameState="Lost";
     }
@@ -70,7 +70,7 @@ function multi()
         count--;
      }
   }
-  if(diffS>30)
+  if(diffS>29.8)
   {
     gameState="Lost";
   }
@@ -134,6 +134,10 @@ function draw()
         if(target1!==undefined)
         {
           target1.destroy();
+        }
+        if(targetGroup!==undefined)
+        {
+          targetGroup.destroyEach();
         }
         textSize(30);
         text("Average Time "+Math.round((diffS/incr)*100)/100+" sec",windowWidth/2-100,windowHeight/2);
